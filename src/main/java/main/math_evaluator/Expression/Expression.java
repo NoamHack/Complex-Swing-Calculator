@@ -23,6 +23,9 @@ public class Expression implements Operand {
     double leftValue = leftOperand.evaluate();
     double rightValue = rightOperand.evaluate();
     return switch (operation) {
+      case '#' -> leftValue * Math.sin(rightValue);
+      case '&' -> leftValue * Math.cos(rightValue);
+      case '_' -> leftValue * Math.tan(rightValue);
       case '@' -> leftValue * Math.log(rightValue);
       case '!' -> leftValue * Math.log10(rightValue);
       case '^' -> Math.pow(leftValue, rightValue);

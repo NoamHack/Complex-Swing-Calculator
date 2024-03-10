@@ -28,14 +28,16 @@ public class NumPadPanel extends JPanel {
     add(getButton("8", "8"), "grow, span 1"); // Number 8
     add(getButton("9", "9"), "grow, span 1"); // Number 9
     add(getButton("ln", " ln "), "grow, span 1"); // Natural logarithm function
-    add(getButton('+', " + "), "grow, span 1, wrap"); // Addition operator
+    add(getButton('+', " + "), "grow, span 1");// Addition operator
+    add(getButton("sin", " sin "), "grow, span 1, wrap"); // Sine function
 
     // Numeric buttons
     add(getButton("4", "4"), "grow, span 1"); // Number 4
     add(getButton("5", "5"), "grow, span 1"); // Number 5
     add(getButton("6", "6"), "grow, span 1"); // Number 6
     add(getButton("log", " log "), "grow, span 1");// Base 10 logarithm function
-    add(getButton('-', " - "), "grow, span 1, wrap");// Subtraction operator
+    add(getButton('-', " - "), "grow, span 1");// Subtraction operator
+    add(getButton("cos", " cos "), "grow, span 1, wrap"); // Cosine function
 
 
     // Numeric buttons and parentheses
@@ -43,7 +45,8 @@ public class NumPadPanel extends JPanel {
     add(getButton("2", "2"), "grow, span 1"); // Number 2
     add(getButton("3", "3"), "grow, span 1"); // Number 3
     add(getButton("(", "("), "grow, span 1"); // Open parenthesis operator
-    add(getButton(")", ")"), "grow, span 1, wrap"); // Close parenthesis operator
+    add(getButton(")", ")"), "grow, span 1"); // Close parenthesis operator
+    add(getButton("tan", " tan "), "grow, span 1, wrap"); // Tangent function
 
     // Bottom row with zero, decimal point, and equal button spanning two rows
     add(getButton("0", "0"), "grow, span 2"); // Number 0 (spanning two columns for a wider button)

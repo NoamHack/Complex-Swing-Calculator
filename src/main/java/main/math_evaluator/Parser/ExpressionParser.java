@@ -10,7 +10,8 @@ import java.util.Deque;
 public class ExpressionParser {
 
   public Operand parse(String expression) {
-    expression = expression.replaceAll("log", "1!").replaceAll("ln", "1@");
+    expression = expression.replaceAll("log", "1!").replaceAll("ln", "1@").replaceAll("sin","1#")
+            .replaceAll("cos","1&").replaceAll("tan","1_");
 
     return buildExpressionTree(convertToPostfixExpression(expression));
   }
@@ -51,7 +52,7 @@ public class ExpressionParser {
 
   private int getPrecedence(char operator) {
     return switch (operator) {
-      case '^', '\u221A', '!', '@' -> 3;
+      case '^', '\u221A', '!', '@', '#', '&', '_' -> 3;
       case '*', '/' -> 2;
       case '+', '-' -> 1;
       default -> throw new IllegalArgumentException("Invalid operator: " + operator);
@@ -88,7 +89,7 @@ public class ExpressionParser {
   }
 
   private boolean isOperator(String token) {
-    final String operators = "+-*/^\u221A!@";
+    final String operators = "+-*/^\u221A!@#&_";
     return token.length() == 1 && operators.indexOf(token.charAt(0)) != -1;
   }
 }
