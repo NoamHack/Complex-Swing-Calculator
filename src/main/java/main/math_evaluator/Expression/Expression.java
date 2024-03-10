@@ -1,5 +1,7 @@
 package main.math_evaluator.Expression;
 
+import javax.lang.model.type.NullType;
+
 public class Expression implements Operand {
   private char operation;
   private Operand leftOperand, rightOperand;
@@ -21,6 +23,8 @@ public class Expression implements Operand {
     double leftValue = leftOperand.evaluate();
     double rightValue = rightOperand.evaluate();
     return switch (operation) {
+      case '@' -> leftValue * Math.log(rightValue);
+      case '!' -> leftValue * Math.log10(rightValue);
       case '^' -> Math.pow(leftValue, rightValue);
       case '\u221A' -> Math.pow(rightValue, 1 / leftValue);
       case '*' -> leftValue * rightValue;
