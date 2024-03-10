@@ -41,6 +41,7 @@ public class CalculatorFrame extends JFrame {
       switch (action) {
         case "clear" -> fieldsPanel.clear();
         case "equal" -> calculate();
+        case "delete" -> fieldsPanel.deleteLastCharacter();
         default -> fieldsPanel.appendToInputField(action);
       }
     });
