@@ -62,6 +62,13 @@ public class FieldsPanel extends JPanel {
     outputField.setText("");
   }
 
+  public void deleteLastCharacter() {
+    String currentText = inputField.getText();
+    if (!currentText.isEmpty()) {
+      inputField.setText(currentText.substring(0, currentText.length() - 1));
+    }
+  }
+
   public void setOnEnterKeyPressed(Runnable onEnterKeyPressed) {
     this.onEnterKeyPressed = onEnterKeyPressed;
   }

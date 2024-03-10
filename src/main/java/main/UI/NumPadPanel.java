@@ -16,7 +16,8 @@ public class NumPadPanel extends JPanel {
 
   public void init() {
     // Special functions at the top
-    add(getButton("C", "clear"), "grow, span 1"); // Clear button
+    add(getButton("AC", "clear"), "grow, span 1");// Clear button
+    add(getButton("C", "delete"), "grow, span 1");// Delete button
     add(getButton('/', " / "), "grow, span 1"); // Division operator
     add(getButton('x', " * "), "grow, span 1"); // Multiplication operator
     add(getButton('^', " ^ "), "grow, span 1"); // Power operator
