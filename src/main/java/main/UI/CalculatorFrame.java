@@ -13,8 +13,9 @@ public class CalculatorFrame extends JFrame {
   private final NumPadPanel numPadPanel;
 
   public CalculatorFrame() {
-    super("Simple Calculator");
-    setPreferredSize(new Dimension(350, 450));
+
+    super("Complex Calculator");
+    setPreferredSize(new Dimension(1000, 500));
     setMinimumSize(new Dimension(290, 400));
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
