@@ -14,7 +14,7 @@ public class CalculatorFrame extends JFrame {
 
   public CalculatorFrame() {
     super("Simple Calculator");
-    setPreferredSize(new Dimension(330, 430));
+    setPreferredSize(new Dimension(350, 450));
     setMinimumSize(new Dimension(290, 400));
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
