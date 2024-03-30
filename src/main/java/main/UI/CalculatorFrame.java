@@ -13,6 +13,7 @@ public class CalculatorFrame extends JFrame {
   private final NumPadPanel numPadPanel;
 
   public CalculatorFrame() {
+
     super("Complex Calculator");
     setPreferredSize(new Dimension(1000, 500));
     setMinimumSize(new Dimension(290, 400));
